@@ -12,6 +12,7 @@ function addToDOM(todo) {
   const div = document.createElement("div");
   div.classList.add("todo");
   div.appendChild(document.createTextNode(todo.title));
+  div.setAttribute('data-id', todo.id);
 
   if (todo.completed) {
     div.classList.add("done");
